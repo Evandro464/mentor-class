@@ -1,0 +1,287 @@
+body{
+    
+    float: left;
+}
+.cabecalho{
+    width: 1428px;
+    background-color: black;
+}
+.menu{
+    height: 700px;
+    width: 175px;
+    background-color: rgba(72, 45, 131, 1);
+    float: left;
+    padding-top: 10px;
+}
+.conteudo{
+    height: 684px;
+    width: 1350px;
+    background-color: white;
+   
+}
+.div-tabela{
+    height: 300px;
+    width: 1240px;
+    background-color:rgb(88, 90, 194);
+    float: left;
+    margin-top: 10px;
+    
+
+    
+    
+
+}
+
+.txt-align-bottom{
+    vertical-align: text-bottom;
+
+}
+.rodape{
+    height: 20px;
+    background-color: black;
+    clear: both;
+    width: 1428px;
+    display: flex;
+}
+.tabelas{
+    margin-top: 100px;
+    justify-content: center;
+    
+}
+.txtmentores{
+    float: right;
+}
+.texto span {
+    color: white;
+    font-weight:bold
+}
+.texto {
+    padding-top: 10px;
+    height: 40px;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(255, 174, 0);
+    font-family: sans-serif;
+    
+ }
+ .menu button{
+    width: 97%;
+    height: 35px;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    margin-bottom: 10px;
+    border: none;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    transition: all 400ms ease;
+    font-size: 10px;
+}
+.menu button:hover{
+    
+    background:  #4c269c;   ;
+    color: white;
+    box-shadow: inset 0 0 0 3px rebeccapurple;
+    border: none;
+}
+
+.material-symbols-outlined {    
+    display: flex;
+    margin-top: auto;  
+}
+
+.tabe {
+    width: 85%;      
+    border-radius: 10px;
+}
+.table-curved {
+    border-collapse: collapse;
+  }
+  .table-curved th {
+    font-size: 15px;
+    padding: 3px 10px;
+    width: 1450px;
+    background-color: #4c269c;
+    color:white;
+    height: 50px;
+    
+   
+
+  }
+  .table-curved th:first-child {
+    border-radius: 8px 0 0 8px;
+    padding: 6px;
+  } 
+
+  .table-curved th:last-child {
+    border-radius: 0 5px 5px 0;    
+  } 
+
+  .table-curved td {
+    background-color: #e5e5e5;
+    padding: 6px 10px;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+  }
+  .table-curved td:first-child {
+    padding: 6px;
+    border-radius: 8px 0 0 8px;
+  }
+  .table-curved td:last-child {
+    border-radius: 0 5px 5px 0;
+  }
+  .table-curved tr:hover td {
+    background-color: #c5c5c5;
+  }
+  #divBusca{
+    background-color:white;
+    border:solid 1px;
+    border-radius:15px;
+    width:300px;
+    height: 40px;
+    
+    
+  }
+  
+  #txtBusca{
+    
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:18px;
+    width:260px;
+    outline: 0;
+  }
+  h6{
+    color: black;
+  }
+  #btn-novo{
+    color: white;
+    float: right;
+    border-radius: 10px;
+    width:200px;
+    background-color: rgba(0, 194, 71, 1);
+    border: none;
+    height: 40px;
+  }
+  .td-action {
+    text-align: right;
+  }
+  .carde{
+    border-radius: 10px;
+    background-color:white;
+    margin-top: 25px;
+    height: 250px;
+    margin-left: 200px;
+    border: transparent 1px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2,) inset;
+    
+
+	
+		
+	
+	background: #FFFFFF;
+	
+   -webkit-box-shadow: 3px 3px 3px 5px 5px rgba(184,175,184,1);
+   -moz-box-shadow: 3px 3px 5px 5px rgba(184,175,184,1);
+   box-shadow:5px 3px 5px 5px rgba(184,175,184,1);
+
+  }
+  .voltar1{
+    margin-top: 60px;
+    margin-left: 200px;
+    font-size: 30px;
+    font-weight: bold;
+    
+  }
+  
+.material-button{
+    width:200px;
+    height:30px;
+    font-size:20px;
+    color:white;
+    background-color:#259b4c;
+    border-style: solid;
+    border-color: #259b4c;
+    border-radius: 20px;
+  }
+
+  .button{
+    width: 35px;
+    height: 35px;
+    border: none;
+    color:whitesmoke;
+    background-color: lightgrey;
+    
+    
+    
+    border-radius: 20px;
+}
+
+input[type="checkbox"]{
+    
+    margin-left: 5px;
+    position: relative;
+    width: 35px;
+    height: 18px;
+    outline: none;
+    -webkit-appearance: none;
+    background-color: #6c6c6c;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2,) inset;
+}
+input:checked[type="checkbox"]{
+    background:#259b4c ;
+}
+
+   
+
+input[type="checkbox"]::before{
+    content: '';
+    
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2,);
+    transform: scale(1.2);
+    transition: .1s;
+    cursor: pointer;
+
+}
+input:checked[type="checkbox"]::before{
+    left: 15px;
+}
+.inp-dados{
+  display: flex;
+    margin-left: 5px;
+    width: 400px;
+    border-radius: 10px;
+    
+}
+.inp-mentor{
+    width: 300px;
+    border-radius: 10px;
+  
+}
+.salvar{
+  margin-left: 15px;  
+  width: 200px;
+ 
+}
+.salvar button{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+    background-color: #4c269c;
+    font-size: 15px;
+}
+
+
+  

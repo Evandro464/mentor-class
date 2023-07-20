@@ -1,0 +1,46 @@
+
+form{
+   text-align: right 10px;
+    display: flex;
+    width: 25%;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 110px;
+    font-family: sans-serif;
+    
+    
+    
+    
+}
+input{
+    width: 95%;
+    border-radius: 10px;
+    height: 25px;
+}
+
+#esqueci-senha{
+    width: 15px;
+    height: 15px;
+    top: 50%;
+}
+.entrar button{
+    width: 96%;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: white;
+    height: 30px;
+    
+}
+.senha1{
+    margin-right: 10px;
+}
+#divBusca{
+    display: inline-block;
+    right: 50px;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-color:black;
+}
+
