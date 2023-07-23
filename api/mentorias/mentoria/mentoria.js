@@ -3,11 +3,11 @@ const renderMentorias = (mentoria)=>{
     const tabela = document.querySelector("tbody");
 
     //listaMentorias.forEach(mentoria => {    
-        mentoria.forEach(mentoria =>{
+         mentoria.forEach  (mentoria =>  {
             tabela.innerHTML = tabela.innerHTML + 
             '<tr> ' +
             '<td> ' + mentoria.mentoria + '</td>' +
-            '<td> ' + mentoria.mentor + '</td>' + 
+            '<td> ' +mentoria.mentor + '</td>' + 
             '<td> ' + mentoria.status + '</td>' +  
             '<td class="td-action"> <button type ="button" onclick="editmentor('+ mentoria.id+')" >editar</button ><button type ="button" onclick="deletar('+ mentoria.id+')" >Deletar</button ></td>'  
         '</tr>';
@@ -16,6 +16,13 @@ const renderMentorias = (mentoria)=>{
         });
    
 }
+/*
+ const obterMentor = async (mentorId)=>{
+    const resultado = await fetch('http://localhost:3000/mentores/' + mentorId);
+    const pessoa = await resultado.json();
+    return pessoa.nome;
+}
+*/
 const editmentoria=(mentoriaid)=>{
     console.log(mentoriaid)
     window.location="../mentores/editMentor/editMentor.html?id="+mentoriaid

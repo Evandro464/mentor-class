@@ -42,7 +42,7 @@ const renderMentores = (mentores) =>{
     let selectHtmlMentores = document.getElementById("id-select-mentor");
     mentores.forEach(mentor =>{
         selectHtmlMentores.innerHTML = selectHtmlMentores.innerHTML+
-       ' <option value ="' + mentor.id +'">'+ mentor.nome + '</option>';
+       ' <option value ="' + mentor.nome +'">'+ mentor.nome + '</option>';
        
        console.log("mentor", mentor)
     })                                     
