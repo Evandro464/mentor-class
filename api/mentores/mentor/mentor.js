@@ -28,5 +28,5 @@ const cadastrarMentores = async (mentores) => {
 
     })
        
-    window.location= 'mentores.html'
+    window.location= '../mentoress.html'
 }

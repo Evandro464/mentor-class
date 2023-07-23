@@ -14,7 +14,7 @@ const renderNovo = (listaMentores) =>{
 }
 const editmentor=(mentorid)=>{
     console.log(mentorid)
-    window.location="editMentor.html?id="+mentorid
+    window.location="../mentores/editMentor/editMentor.html?id="+mentorid
 }
 //const deletar=(mentorid)=>{
     //console.log(mentorid)
@@ -22,7 +22,7 @@ const editmentor=(mentorid)=>{
 //}
 
 const getNovo = async () => {
-    const response = await fetch("http://localhost:3000/mentores");
+    const response = await fetch("http://localhost:3000/mentores" );
     const listaMentoresJson = await response.json();
 
 //console.log(listaMentores);
@@ -34,7 +34,7 @@ const deletar = async (id) => {
     await fetch('http://localhost:3000/mentores/' + id, {
         method:'DELETE'              
     });
-    window.location="mentores.html";
+    window.location="../mentores/mentoress.html";
 
       alert ("o mentor sera excluido")
     return;

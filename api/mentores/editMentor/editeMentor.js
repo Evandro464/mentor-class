@@ -5,6 +5,7 @@ let idEditar = null
 //criando variavel formulario que recebe um elemento por id 
 const formulario = document.getElementById('formulario')
 
+//criando uma funcao recuperarId 
 const recuperarId = () => {
     const parametros = window.location.search
     const parametroObjeto = new URLSearchParams(parametros)
@@ -13,7 +14,10 @@ const recuperarId = () => {
     return id
 }
 
+// criando funcao buscarPessoa (funcao async)
 const buscarPessoa = async (id) => {
+
+    //funcao resultado que vai aguardar uma busca na api com o id
     const resultado = 
     await fetch('http://localhost:3000/mentores/' + id );
     const pessoa = await resultado.json()
@@ -65,7 +69,7 @@ const salvarMentor = async () =>{
     await editarPessoa(id, pessoa)
 
     //redireciona a pagina para mentores.html
-    window.location = 'mentores.html'
+    window.location = '../mentoress.html'
 
 }
 
