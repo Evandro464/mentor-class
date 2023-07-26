@@ -1,21 +1,17 @@
-const formulario = document.getElementById("formulario2")
-
-formulario.addEventListener("submit" ,  (e)=> {
-    
-    e.preventDefault()
-    
-    
+const salvarMentoria = () => {      
+    const formulario = document.getElementById("formulario2")
 
     const mentoria = formulario.elements['mentoria' ].value;
-    const mentor = formulario.elements['mentor'].value;
+    const mentor = formulario.elements['mentor'].value;    
 
     const mentorias = {
         mentoria,
         mentor,
+       // status
     }
     console.log("mentorias" , mentorias)
     cadastrarMentoria(mentorias);
-})
+}
 
 const cadastrarMentoria = async (mentorias) => {
     await fetch ("http://localhost:3000/mentorias",{
@@ -28,7 +24,7 @@ const cadastrarMentoria = async (mentorias) => {
 
     })
        
-    window.location= "mentorias.html"
+    window.location= "../listaMentorias.html"
 }
 
 const getMentores = async () =>{

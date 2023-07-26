@@ -2,10 +2,7 @@ const formulario = document.getElementById("formulario1")
 
 formulario.addEventListener("submit" ,  (e)=> {
     
-    e.preventDefault()
-    
-    
-
+    e.preventDefault()  
     const nome = formulario.elements['nome'].value;
     const email = formulario.elements['email'].value;
 
@@ -28,5 +25,5 @@ const cadastrarMentores = async (mentores) => {
 
     })
        
-    window.location= '../mentoress.html'
+    window.location= '../listaMentores.html'
 }

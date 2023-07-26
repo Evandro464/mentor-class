@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../estilo.css">
+    <link rel="stylesheet" href="../estilo.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet"
@@ -15,7 +15,7 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/62e43a72a9.js"></script>
-    <script src="cadastrarMentoria.js" defer></script>
+    <script src="editeTurma.js" defer></script>
    <!-- <script src="mentoria.js" defer></script>-->
     <title>Document</title>
 </head>
@@ -29,6 +29,36 @@
         font-size: 18px;
         color: #4c269c;
     }
+    #id-select-semana{
+        display: flex;
+        border-radius: 10px;
+        width: 150px;
+        
+            }
+            #data{
+                border-radius: 10px;
+            }
+            #horario-inicio{
+                border-radius: 10px;
+                width: 150px;
+            }
+            #horario-fim{
+                border-radius: 10px;
+                width: 150px;
+            }
+            .carde{
+                height: 370px;
+                
+            }
+            #turmas{
+                border-radius: 10px;
+            }
+            #link{
+                border-radius: 10px;
+            }
+            #qtd-encontros{
+                border-radius: 10px;
+            }
 </style>
 
 <body>
@@ -91,34 +121,48 @@
             <div class="voltar1">
                <!-- <form action="../mentores/mentoress.html">-->
                     <button type="button" class="button"><i class="fa fa-arrow-left"
-                            aria-hidden="true"></i></button>&ensp; Nova Mentoria
+                            aria-hidden="true"></i></button>&ensp; Nova Turma
             </div>
             <div class="carde">
-                <h4>&ensp; Dados</h4>
+                <h4>&ensp; mentoria</h4>
                 <hr>
-                <form id="formulario2">
+                <form id="formulario4">
                     <div class="dados-mentoria">
                         <label>&ensp;mentoria
-                            <input class="inp-dados" type="text" name="mentoria">
+                            <select class="inp-dados" name="mentoria" id="id-select-mentoria">
+                            </select>
                         </label>&ensp;
                         <label>&ensp;mentor
                             <select class="inp-dados" name="mentor" id="id-select-mentor">
                         </select>
+                        </label><br>
+                        &ensp;<label>data
+                       <input type="date" name="data" id="data">
+                    </label> 
+                    <label>&ensp;Dia da semana
+                    <select class="inp-dados" name="semana" id="id-select-semana">
+                       </select>
+                    </label>
+                    <label>&ensp;Hora de inicio
+                        <input type="time" name="horario1" id="horario-inicio">
+                     </label>
+                     <label>&ensp;Hora de fim
+                        &ensp;&ensp;<input type="time" name="horario2" id="horario-fim">
+                     </label>
+                    <br><br> <h4>&ensp; Turma</h4>
+                     <hr>
+                     <label>&ensp;turma
+                        <input type="text" name="turmas" id="turmas">
+                     </label>
+                     <label>&ensp; Link da aula
+                        <input type="text" name="link" id="link">
                         </label>
-                        <label>&ensp;
-                            
-                        
-
+                        <label>&ensp;Qtd de encontros
+                        <input type="text" name="encontros" id="qtd-encontros">
+                     </label>
                     </div>
-
-
-                    <br>
-                    Status
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-
-                        <label  class="form-check-label" for="flexSwitchCheckChecked">Ativo</label>
-                    </div><br>
+                   <br>
+                   
                     <div class="salvar">
                         <button type="submit">Salvar</button>
                 </form>
