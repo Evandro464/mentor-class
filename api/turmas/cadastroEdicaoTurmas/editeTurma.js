@@ -23,6 +23,9 @@ const carregarDadosFormulario = (pessoa) => {
   formulario.elements['mentor'].value = pessoa.mentor;
   formulario.elements['semana'].value = pessoa.semana;
   formulario.elements['link'].value = pessoa.link;
+  formulario.elements['turma'].value = pessoa.turmas;
+  formulario.elements['link'].value = pessoa.link;
+  formulario.elements['encontros'].value = pessoa.encontros;
 
   
   
@@ -39,11 +42,11 @@ const editarPessoa = async (id, pessoa) => {
     body: JSON.stringify(pessoa)
   });
 
-  window.location= "../turmas.html"
+  window.location= "turmas.html"
 };
 
 // Função para salvar as informações de uma pessoa no banco de dados
-const salvarTurma = async () => {
+const salvarTurmas = async () => {
   
   const id = document.getElementById('id').value;
   const mentoria = document.getElementById('id-select-mentoria').value;
@@ -51,14 +54,17 @@ const salvarTurma = async () => {
   const data = document.getElementById('data').value;
   const semana = document.getElementById('id-select-semana').value;
   const horario1 = document.getElementById('horario-inicio').value;
+  const horario2 = document.getElementById('horario-fim').value;
   const link = document.getElementById('link').value;
+  const turmas = document.getElementById('turma').value;
+  const encontros = document.getElementById('qtd-encontros').value;
 
 
-  const pessoa = { mentoria, mentor, data, semana, horario1,turmas ,link ,};
+  const pessoa = { mentoria, mentor, data, semana, horario1,turmas ,link , encontros, horario2};
 
   await editarPessoa(id, pessoa);
 
-  console.log("turma")
+  console.log("turmas")
   
 };
 
@@ -127,38 +133,27 @@ const renderDiaSemana =(listaM) =>{
 }
 
 const getTurmas = async () =>{
-  const response = await fetch (" http://localhost:3000/turmas")
+  const response = await fetch ("http://localhost:3000/turmas")
   const listaTurmasJson = await response.json();
   renderTurmas(listaTurmasJson);
 
 }
 
-const renderTurmas =(listaM) =>{
+const renderTurmas = (turma) =>{
   let selectHtmlTurmas = document.getElementById("turma");
-  listaM.forEach(b => {
-      selectHtmlTurmas.innerHTML = selectHtmlTurmas.innerHTML+
-      ' <option value ="' + b.turmas +'">'+ b.turmas + '</option>';
 
-      console.log("turma", listaM)
-  })
+  if(selectHtmlTurmas != null){
+    turma.forEach(turma=>{
+        selectHtmlTurmas.innerHTML = selectHtmlTurmas.innerHTML+
+      ' <option value ="' + turma.turma +'">'+ turma.turma + '</option>';
+      
+      console.log("turma", turma)
+    })   
+  }                                  
 }
 
-const getLink = async () =>{
-  const response = await fetch (" http://localhost:3000/turmas")
-  const listaLinkJson = await response.json();
-  renderLinks(listaLinkJson);
 
-}
 
-const renderLinks =(listaM) =>{
-  let selectHtmlLinks = document.getElementById("link");
-  listaM.forEach(b => {
-      selectHtmlLinks.innerHTML = selectHtmlLinks.innerHTML+
-      ' <option value ="' + b.link +'">'+ b.link + '</option>';
-
-      console.log("link", listaM)
-  })
-}
 
         
                                      
@@ -169,7 +164,7 @@ getMentores();
 getMentorias();
 getDiaSemana();
 getTurmas()
-getLink()
+
 
 // Carrega os dados da pessoa que será editada ao abrir o formulário de edição
 carregarDadosEditar();

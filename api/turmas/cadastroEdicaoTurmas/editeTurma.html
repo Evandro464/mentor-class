@@ -74,23 +74,27 @@
 
 
             <div class="texto"> mentor<span>class</span></div><br>
-            <a href="../mentores/mentoress.html"><button><span class="material-symbols-outlined">
+            <a href="../../mentores/listaMentores.html"><button><span class="material-symbols-outlined">
                         person
                     </span> Mentores</button></a>
             <script type="text" src=></script>
             <br>
-            <a href="../mentorias/mentoria/mentorias.html">
+            <a href="../../mentorias/listaMentorias.html">
                 <button type="button" class="btnMentorias"><span class="material-symbols-outlined">
                         laptop_chromebook
                     </span> Mentorias</button> </a>
             <br>
+            <a href="turmas.html">
             <button type="button" class="btnTurmas"><span class="material-symbols-outlined">
                     groups_2
                 </span>Turmas</button>
+            </a>
             <br>
+            <a href="">
             <button type="button" class="btnAlunos"><span class="material-symbols-outlined">
                     group
                 </span>Alunos</button>
+            </a>
 
         </div>
         <div class="conteudo">
@@ -123,8 +127,11 @@
             </div><br>
             <div class="voltar1">
                <!-- <form action="../mentores/mentoress.html">-->
+                <a href="turmas.html">
                     <button type="button" class="button"><i class="fa fa-arrow-left"
-                            aria-hidden="true"></i></button>&ensp; Editar Turma
+                            aria-hidden="true"></i></button></a>
+                    
+                            &ensp; Editar Turma
             </div>
             <div class="carde">
                 <h4>&ensp; mentoria</h4>
@@ -156,10 +163,10 @@
                     <br><br> <h4>&ensp; Turma</h4>
                      <hr>
                      <label>&ensp;turma
-                        <select class="inp-dados" name="turma" id="turma"></select>
+                        <input type="text" name="turmas" id="turma">
                      </label>
                      <label>&ensp; Link da aula
-                        <select class="inp-dados" name="link" id="link"></select>
+                        <input type="text" name="link" id="link">
                         </label>
                         <label>&ensp;Qtd de encontros
                         <input type="text" name="encontros" id="qtd-encontros">
@@ -168,7 +175,7 @@
                    <br>
                    
                     <div class="salvar">
-                        <button type="button" onclick="salvarTurma()">Salvar</button>
+                        <button type="button" onclick="salvarTurmas()">Salvar</button>
                 </form>
             </div>
 

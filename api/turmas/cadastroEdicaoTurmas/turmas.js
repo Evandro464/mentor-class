@@ -5,7 +5,7 @@ const renderNovo = (listaTurmas) =>{
     listaTurmas.forEach(turma => {    
     tabela.innerHTML = tabela.innerHTML + 
         '<tr> ' +
-            '<td> ' + turma.turma + '</td>' +
+            '<td> ' + turma.turmas + '</td>' +
             '<td> ' + turma.mentor + '</td>' +  
             '<td> ' + turma.mentoria + '</td>' +  
             '<td> ' + turma.data + '</td>' +  
