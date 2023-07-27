@@ -36,13 +36,17 @@ renderNovo(listaTurmasJson);
 
 }
 const deletar = async (id) => {
-    await fetch('http://localhost:3000/turmas/' +id, {
-        method:'DELETE'              
-    });
-    window.location="editeTurma.html";
-
-      alert ("o mentor sera excluido")
+    if(confirm("Deseja deletar o item?")){
+      await fetch('http://localhost:3000/turmas/' + id, {
+          method:'DELETE'              
+      });
+      window.location="turmas.html";
+  
+      alert ("O mentor foi excluido!");
+      return;
+    }
     return;
+  
 }
 
   

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilo.css">
+    <link rel="stylesheet" href="../../core/estilo.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet"
@@ -50,11 +50,14 @@
                 height: 370px;
                 
             }
-            #turmas{
+            #turma{
                 border-radius: 10px;
+                width: 150px;
+                height: 28px;
             }
             #link{
                 border-radius: 10px;
+                width: 200px;
             }
             #qtd-encontros{
                 border-radius: 10px;
@@ -121,12 +124,13 @@
             <div class="voltar1">
                <!-- <form action="../mentores/mentoress.html">-->
                     <button type="button" class="button"><i class="fa fa-arrow-left"
-                            aria-hidden="true"></i></button>&ensp; Nova Turma
+                            aria-hidden="true"></i></button>&ensp; Editar Turma
             </div>
             <div class="carde">
                 <h4>&ensp; mentoria</h4>
                 <hr>
                 <form id="formulario4">
+                    <input type="hidden" name="id" id="id" value="">
                     <div class="dados-mentoria">
                         <label>&ensp;mentoria
                             <select class="inp-dados" name="mentoria" id="id-select-mentoria">
@@ -152,10 +156,10 @@
                     <br><br> <h4>&ensp; Turma</h4>
                      <hr>
                      <label>&ensp;turma
-                        <input type="text" name="turmas" id="turmas">
+                        <select class="inp-dados" name="turma" id="turma"></select>
                      </label>
                      <label>&ensp; Link da aula
-                        <input type="text" name="link" id="link">
+                        <select class="inp-dados" name="link" id="link"></select>
                         </label>
                         <label>&ensp;Qtd de encontros
                         <input type="text" name="encontros" id="qtd-encontros">
@@ -164,7 +168,7 @@
                    <br>
                    
                     <div class="salvar">
-                        <button type="submit">Salvar</button>
+                        <button type="button" onclick="salvarTurma()">Salvar</button>
                 </form>
             </div>
 

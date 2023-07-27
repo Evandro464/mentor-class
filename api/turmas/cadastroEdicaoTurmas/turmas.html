@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilo.css">
+    <link rel="stylesheet" href="../../core/estilo.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet"
@@ -15,9 +15,9 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="turmas.js" defer></script>
-    <script src="editeTurma.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
         <div class="cabecalho">
@@ -25,24 +25,29 @@
         </div>
         <div class="menu">
             <div class="texto"> mentor<span>class</span></div><br>
-            <a href="mentoress.html"><button><span class="material-symbols-outlined">
+            <a href="../../mentores/listaMentores.html"><button><span class="material-symbols-outlined">
                         person
                     </span> Mentores</button></a>
             <script type="text" src=></script>
             <br>
-            <form action="../mentorias/mentoria/mentorias.html">
-                <button type="submit" class="btnMentorias"><span class="material-symbols-outlined">
+            <a href="../../mentorias/listaMentorias.html">
+                <button type="button" class="btnMentorias"><span class="material-symbols-outlined">
                         laptop_chromebook
-                    </span> Mentorias</button>
+            </span> Mentorias</button>
+        </a>
             </form>
             <br>
-            <button type="submit" class="btnTurmas"><span class="material-symbols-outlined">
-                    groups_2
-                </span>Turmas</button>
+            <a href="turmas.html">
+                <button type="button" class="btnTurmas"><span class="material-symbols-outlined">
+                        groups_2
+                    </span>Turmas</button>
+            </a>
             <br>
-            <button type="submit" class="btnAlunos"><span class="material-symbols-outlined">
+            <a href="">
+            <button type="button" class="btnAlunos"><span class="material-symbols-outlined">
                     group
                 </span>Alunos</button>
+            </a>
         </div>
         <div class="conteudo">
             <div class="float-end">
@@ -70,9 +75,9 @@
                     </div>
                 </div>
                 <div class="col-6 col-xx12">
-                    <form action="novaTurma.html">
+                    <a href="novaTurma.html">
                         <button type="submit" id="btn-novo">+ Novo Turma</button>
-                    </form>
+                    </a>
                 </div>
             </div><br>
             <!--Linha Tabela-->
@@ -100,4 +105,5 @@
         </div>
     </div>
 </body>
+
 </html>

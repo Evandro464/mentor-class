@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilo.css">
+    <link rel="stylesheet" href="../../core/estilo.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet"
@@ -71,23 +71,26 @@
 
 
             <div class="texto"> mentor<span>class</span></div><br>
-            <a href="../mentores/mentoress.html"><button><span class="material-symbols-outlined">
+            <a href="../../mentores/listaMentores.html"><button><span class="material-symbols-outlined">
                         person
                     </span> Mentores</button></a>
             <script type="text" src=></script>
             <br>
-            <a href="../mentorias/mentoria/mentorias.html">
+            <a href="../../mentorias/listaMentorias.html">
                 <button type="button" class="btnMentorias"><span class="material-symbols-outlined">
                         laptop_chromebook
                     </span> Mentorias</button> </a>
             <br>
+            <a href="turmas.html">
             <button type="button" class="btnTurmas"><span class="material-symbols-outlined">
                     groups_2
                 </span>Turmas</button>
-            <br>
+            </a>
+            <br><a href="">
             <button type="button" class="btnAlunos"><span class="material-symbols-outlined">
                     group
                 </span>Alunos</button>
+            </a>
 
         </div>
         <div class="conteudo">
@@ -119,15 +122,17 @@
                 </div>
             </div><br>
             <div class="voltar1">
-               <!-- <form action="../mentores/mentoress.html">-->
+                <a href="turmas.html">
                     <button type="button" class="button"><i class="fa fa-arrow-left"
-                            aria-hidden="true"></i></button>&ensp; Nova Turma
+                            aria-hidden="true"></i></button></a>&ensp; Nova Turma
             </div>
             <div class="carde">
                 <h4>&ensp; mentoria</h4>
                 <hr>
                 <form id="formulario4">
+                    <input type="hidden" name="id" id="id" value="">
                     <div class="dados-mentoria">
+                        
                         <label>&ensp;mentoria
                             <select class="inp-dados" name="mentoria" id="id-select-mentoria">
                             </select>
@@ -164,7 +169,7 @@
                    <br>
                    
                     <div class="salvar">
-                        <button type="submit">Salvar</button>
+                        <button type="button" onclick="salvarTurmas()">Salvar</button>
                 </form>
             </div>
 

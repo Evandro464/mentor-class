@@ -1,10 +1,5 @@
-const formulario = document.getElementById("formulario4")
-
-formulario.addEventListener("submit" ,  (e)=> {
-    
-    e.preventDefault()
-    
-    
+const salvarTurmas = () => {      
+    const formulario = document.getElementById("formulario4")
 
     const mentoria = formulario.elements['mentoria' ].value;
     const mentor = formulario.elements['mentor'].value;
@@ -12,37 +7,35 @@ formulario.addEventListener("submit" ,  (e)=> {
     const semana = formulario.elements['semana'].value;
     const horario1 = formulario.elements['horario1'].value;
     const horario2 = formulario.elements['horario2'].value;
-    const turma = formulario.elements['turmas'].value;
+    const turmas = formulario.elements['turmas'].value;
     const link = formulario.elements['link'].value;
     const encontros = formulario.elements['encontros'].value;
-    
-     
-    //const status =  document.getElementById ("flexSwitchCheckChecked").checked;
+       
 
-    const novaTurma = {
+    const turma = {
         mentoria,
         mentor,
         data,
         semana,
         horario1,
         horario2,
-        turma,
+        turmas,
         link,
-        encontros
-
+        encontros,
+       // status
     }
-    console.log("novaTurma" , novaTurma)
-    cadastrarTurma(novaTurma);
-})
+    console.log("turma" , turma)
+    cadastrarTurmas(turma);
+}
 
-const cadastrarTurma = async (novaTurma) => {
-    await fetch (" http://localhost:3000/turmas",{
+const cadastrarTurmas = async (turmas) => {
+    await fetch ("http://localhost:3000/turmas",{
         method: "POST",
         headers: {
             'Accept' : 'application/json, text/plain, */*' ,
             'Content-Type': 'application/json; charset=UTF-8'
         },
-        body: JSON.stringify(novaTurma)
+        body: JSON.stringify(turmas)
 
     })
        
@@ -99,4 +92,6 @@ const renderDiaSemana =(listaM) =>{
 getMentorias()
 getMentor()
 getDiaSemana()
+
+
 

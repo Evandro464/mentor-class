@@ -59,26 +59,14 @@
     {
       "mentoria": "português",
       "mentor": "alex",
-      "data": "20/07/2023",
-      "semana": "sengunda-feira",
-      "horario1": "13:00",
-      "horario2": "14:08",
-      "turma": "P",
-      "link": "http://localhost:3000/mentorias",
-      "encontros": "2",
-      "id": 1
-    },
-    {
-      "mentoria": "português",
-      "mentor": "alex",
       "data": "",
       "semana": "segunda-feira",
       "horario1": "",
       "horario2": "",
-      "turma": "",
+      "turmas": "",
       "link": "",
       "encontros": "",
-      "id": 2
+      "id": 1
     }
   ],
   "semana": [
