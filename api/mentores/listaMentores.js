@@ -1,7 +1,36 @@
+
+const pesquisar  = async ()=>{
+    if(event.key === 'Enter') {
+        const inputPesquisa = document.getElementById ("txtBusca");
+        let valorPesquisa = inputPesquisa.value;
+        let valorPesquisaFinal = '';
+
+        if(valorPesquisa) {
+            valorPesquisaFinal ='?q=' + valorPesquisa;
+        }
+        const respons = await fetch('http://localhost:3000/mentores/' + valorPesquisaFinal )
+        const listaMentoresJson = await respons.json()
+        renderNovo(listaMentoresJson);
+    }
+
+}
+const getMentoresPesquisa = async () => {
+    const response = await fetch("http://localhost:3000/mentores" );
+    const listaMentoresJson = await response.json();
+
+//console.log(listaMentores);
+    renderNovo(listaMentoresJson);
+
+
+}
+
 const renderNovo = (listaMentores) =>{
     // criando variavel 
-    const tabela = document.querySelector("tbody");
+    const tabelaAntiga = document.querySelector("tbody");
+    let newTabela = document.createElement('tbody');
+    tabelaAntiga.parentNode.replaceChild(newTabela, tabelaAntiga);
 
+    const tabela = document.querySelector("tbody");
     listaMentores.forEach(mentor => {    
     tabela.innerHTML = tabela.innerHTML + 
         '<tr> ' +
