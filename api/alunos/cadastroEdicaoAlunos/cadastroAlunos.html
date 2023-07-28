@@ -17,7 +17,8 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/62e43a72a9.js"></script>
-    <script src="cadastroMentor.js" defer></script>
+    <script src="cadastroAlunos.js" defer></script>
+    
 
     <title>Document</title>
 </head>
@@ -45,7 +46,7 @@
                 <span>class</span>
             </div>
             <br>
-            <a href="../listaMentores.html">
+            <a href="../../mentores/listaMentores.html">
                 <button type="button">
                     <span class="material-symbols-outlined">person</span>
                     Mentores
@@ -69,7 +70,7 @@
                 </button>
             </a>
             <br>
-            <a href="../../alunos/listaAlunos.html">
+            <a href="../listaAlunos.html">
                 <button type="button" class="btnAlunos">
                     <span class="material-symbols-outlined">
                         group
@@ -96,15 +97,15 @@
                 </div>
             </div><br>
             <div class="voltar1">
-                <a href="../listaMentores.html">
+                <a href="../listaAlunos.html">
                     <button class="button"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></a>&ensp; Novo
-                    Mentor
+                    Aluno
             </div>
             
             <div class="carde">
                 <h4>&ensp; Dados</h4>
                 <hr>
-                <form id="formulario1">
+                <form id="formulario5">
                     <div class="dados-mentoria">
                         <label>&ensp;Nome
                             <input class="inp-dados" type="text" name="nome">
@@ -119,7 +120,7 @@
 
                     </div><br>
                     <div class="salvar">
-                        <button type="submit">Salvar</button>
+                        <button type="button" onclick="salvarAlunos()">Salvar</button>
                 </form>
             </div>
         </div>

@@ -26,6 +26,12 @@ const carregarDadosFormulario = (pessoa) => {
   formulario.elements['turma'].value = pessoa.turmas;
   formulario.elements['link'].value = pessoa.link;
   formulario.elements['encontros'].value = pessoa.encontros;
+  formulario.elements['horario1'].value = pessoa.horario1
+  formulario.elements['encontros'].value = pessoa.encontros;
+  formulario.elements['horario2'].value = pessoa.horario2;
+  formulario.elements['data'].value = pessoa.data;
+
+
 
   
   

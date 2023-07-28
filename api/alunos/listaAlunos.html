@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+   
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet"
@@ -12,50 +12,35 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="../../core/estilo.css">
-   
-   
+    <link rel="stylesheet" href="../core/estilo.css">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/62e43a72a9.js"></script>
-   
-    <script src="edicaoMentoria.js" defer></script>
-   <!-- <script src="mentoria.js" defer></script>-->
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+   <!--<script src="cadastroEdicaoMentor/edicaoMentor.js" defer></script>-->
+    <script src="listaAlunos.js" defer></script>
     <title>Document</title>
 </head>
-<style>
-    input {
-        display: block;
-
-    }
-
-    h4 {
-        font-size: 18px;
-        color: #4c269c;
-    }
-</style>
-
 <body>
     <div class="container">
         <div class="cabecalho">
             header
         </div>
-
-               <!--Menus Paginas-->
-            <div class="menu">
+              <!--Menus Paginas-->
+        <div class="menu">
                 <div class="texto"> mentor
                     <span>class</span>
                 </div>
                 <br>
-                <a href="../../mentores/listaMentores.html">
+                <a href="../../api/mentores/listaMentores.html">
                     <button type="button">
                         <span class="material-symbols-outlined">person</span>
                         Mentores
                     </button>
                 </a>
                 <br>
-                <a href="../listaMentorias.html">
+                <a href="../mentorias/listaMentorias.html">
                     <button type="button" class="btnMentorias">
                         <span class="material-symbols-outlined">
                             laptop_chromebook
@@ -64,7 +49,7 @@
                     </button>
                 </a>
                 <br>
-                <a href="../../turmas/cadastroEdicaoTurmas/turmas.html">
+                <a href="../turmas/cadastroEdicaoTurmas/turmas.html">
                     <button type="button" class="btnTurmas">
                         <span class="material-symbols-outlined">
                             groups_2
@@ -72,22 +57,20 @@
                     </button>
                 </a>
                 <br>
-                <a href="../../alunos/listaAlunos.html">
+                <a href="listaAlunos.html">
                     <button type="button" class="btnAlunos">
                         <span class="material-symbols-outlined">
                             group
                         </span>Alunos
                     </button>
                 </a>
-            </div>
+        </div>
         <!--Fecha menu-->
+
         <div class="conteudo">
-
-           <div class="float-end">
+            <div class="float-end">
                 <div class="row ">
-
                     <div class="col-xs-12 col-xx12">
-
                         <br>
                         <h6>Augusto Carvalho</h6>
                         <p>augusto@gmail.com</p>
@@ -96,53 +79,44 @@
             </div><br><br>
             <div class="row">
                 <div class="col-xs-12 col-xx12">
-
+                    <h3>Alunos</h3>
                 </div>
             </div><br>
-            <div class="voltar1">
-               <!-- <form action="../mentores/mentoress.html">-->
-                <a href="../listaMentorias.html">
-                    <button type="button" class="button"><i class="fa fa-arrow-left"
-                            aria-hidden="true"></i></button></a>&ensp; Editar mentoria
-            </div>
-            <div class="carde">
-                <h4>&ensp; Dados</h4>
-                <hr>
-                <form id="formulario2">
-
-                    <input type="hidden" name="id" id="id" value="">
-
-                    <div class="dados-mentoria">
-                        <label>&ensp;mentoria
-                            <input class="inp-dados" type="text" name="mentoria" id="mentoria">
-                        </label>&ensp;
-                        <label>&ensp;mentor
-                            <select class="inp-dados" name="mentor" id="id-select-mentor">
-                        </select>
-                        </label>
-                        <label>&ensp;       
+            <div class="row">
+                <div class="col-6">
+                    <div id="divBusca">
+                        <input type="text" id="txtBusca" placeholder="Pesquise uma palavra chave..." />
+                        <span class="material-symbols-outlined">
+                            search
+                        </span>
+                        </a>
                     </div>
-                    <br>
-                    Status
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-
-                        <label  class="form-check-label" for="flexSwitchCheckChecked">Ativo</label>
-                    </div><br>
-                    <div class="salvar">
-                        <button type="button" onclick="salvarMentoria()">Salvar</button>
-                </form>
+                </div>
+                <div class="col-6 col-xx12">
+                    <a href="cadastroEdicaoAlunos/cadastroAlunos.html">
+                        <button type="button" id="btn-novo">+ Novo Aluno</button>
+                    </a>
+                    
+                </div>
+            </div><br>
+            <!--Linha Tabela-->
+            <div class="row tabe">
+                <div class="col-3-xx12">
+                    <table class="table-curved">
+                        <thead>
+                            <th>&ensp; Nome</th>
+                            <th>E-mail</th>
+                            <th class="td-action">Ações &ensp;</th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-
-
-
+        </div>
+        <div class="rodape">
+            rodape
         </div>
     </div>
-    <div class="rodape">
-        rodape
-    </div>
-    </div>
-
 </body>
-
 </html>
