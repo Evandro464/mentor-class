@@ -24,6 +24,6 @@ const cadastrarAluno = async (alunos) => {
 
     })
        
-    window.location= "../listaAlunos.html"
+    window.location= "../../html/Alunos/listaAlunos.html"
 }
 

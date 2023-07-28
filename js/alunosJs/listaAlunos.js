@@ -14,7 +14,7 @@ const renderNovo = (listaMentores) =>{
 }
 const editAluno=(alunoid)=>{
     console.log(alunoid)
-    window.location="../alunos/cadastroEdicaoAlunos/edideAluno.html?id=" + alunoid
+    window.location="../../html/Alunos/listaAlunos.html?id=" + alunoid
 }
 
 const getNovo = async () => {
