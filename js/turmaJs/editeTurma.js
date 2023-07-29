@@ -30,10 +30,6 @@ const carregarDadosFormulario = (pessoa) => {
   formulario.elements['encontros'].value = pessoa.encontros;
   formulario.elements['horario2'].value = pessoa.horario2;
   formulario.elements['data'].value = pessoa.data;
-
-
-
-  
   
 };
 
@@ -65,13 +61,11 @@ const salvarTurmas = async () => {
   const turmas = document.getElementById('turma').value;
   const encontros = document.getElementById('qtd-encontros').value;
 
-
   const pessoa = { mentoria, mentor, data, semana, horario1,turmas ,link , encontros, horario2};
 
   await editarPessoa(id, pessoa);
 
-  console.log("turmas")
-  
+  console.log("turmas")  
 };
 
 // Função para carregar os dados da pessoa que será editada ao abrir o formulário de edição
@@ -88,7 +82,6 @@ const getMentores = async () =>{
   const response = await fetch ("https://api-mentorclass.onrender.com/mentores")
   const listaMentoresJson = await response.json();
   renderMentores(listaMentoresJson);
-
 }
 
 const renderMentores = (mentores) =>{
@@ -96,8 +89,8 @@ const renderMentores = (mentores) =>{
 
   if(selectHtmlMentores != null){
     mentores.forEach(mentor =>{
-        selectHtmlMentores.innerHTML = selectHtmlMentores.innerHTML+
-      ' <option value ="' + mentor.nome +'">'+ mentor.nome + '</option>';
+        selectHtmlMentores.innerHTML = selectHtmlMentores.innerHTML +
+               ' <option value ="' + mentor.nome +'">'+ mentor.nome + '</option>';
       
       console.log("mentor", mentor)
     })   
@@ -108,7 +101,6 @@ const getMentorias = async () =>{
   const response = await fetch (" https://api-mentorclass.onrender.com/mentorias")
   const listaTurmasJson = await response.json();
   renderMentorias(listaTurmasJson);
-
 }
                                                                                                                              
 const renderMentorias = (listaM) =>{                                                                                                                                  
@@ -122,10 +114,9 @@ const renderMentorias = (listaM) =>{
 }
 
 const getDiaSemana = async () =>{
-  const response = await fetch (" https://api-mentorclass.onrender.com/turmas")
+  const response = await fetch (" https://api-mentorclass.onrender.com/semana")
   const listaTurmaJson = await response.json();
   renderDiaSemana(listaTurmaJson);
-
 }
 
 const renderDiaSemana =(listaM) =>{
@@ -142,7 +133,6 @@ const getTurmas = async () =>{
   const response = await fetch ("https://api-mentorclass.onrender.com/turmas")
   const listaTurmasJson = await response.json();
   renderTurmas(listaTurmasJson);
-
 }
 
 const renderTurmas = (turma) =>{

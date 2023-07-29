@@ -20,8 +20,6 @@ const getMentoresPesquisa = async () => {
 
 //console.log(listaMentores);
     renderNovo(listaMentoresJson);
-
-
 }
 
 const renderNovo = (listaMentores) =>{
@@ -51,20 +49,15 @@ const editeturma=(turmaId)=>{
     console.log(turmaId)
     window.location="editeTurma.html?id="+turmaId
 }
-//const deletar=(mentorid)=>{
-    //console.log(mentorid)
-    
-//}
 
 const getNovo = async () => {
     const response = await fetch("https://api-mentorclass.onrender.com/turmas" );
     const listaTurmasJson = await response.json();
 
-//console.log(listaMentores);
-renderNovo(listaTurmasJson);
-
-
+    //console.log(listaMentores);
+    renderNovo(listaTurmasJson);
 }
+
 const deletar = async (id) => {
     if(confirm("Deseja deletar o item?")){
       await fetch('https://api-mentorclass.onrender.com/turmas/' + id, {
@@ -75,13 +68,7 @@ const deletar = async (id) => {
       alert ("O mentor foi excluido!");
       return;
     }
-    return;
-  
+    return;  
 }
 
-  
-  
-
-
 getNovo();
-

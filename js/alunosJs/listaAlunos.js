@@ -18,10 +18,8 @@ const getMentoresPesquisa = async () => {
     const response = await fetch("https://api-mentorclass.onrender.com/alunos" );
     const listaMentoresJson = await response.json();
 
-//console.log(listaMentores);
+    //console.log(listaMentores);
     renderNovo(listaMentoresJson);
-
-
 }
 
 const renderNovo = (listaMentores) =>{
@@ -51,11 +49,10 @@ const getNovo = async () => {
     const response = await fetch("https://api-mentorclass.onrender.com/alunos" );
     const listaAlunosJson = await response.json();
 
-//console.log(listaMentores);
-renderNovo(listaAlunosJson);
-
-
+    //console.log(listaMentores);
+    renderNovo(listaAlunosJson);
 }
+
 const deletar = async (id) => {
 
     if(confirm("Deseja deletar o item?")){

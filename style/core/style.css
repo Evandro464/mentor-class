@@ -6,11 +6,7 @@ form{
     margin: 0 auto;
     justify-content: center;
     margin-top: 110px;
-    font-family: sans-serif;
-    
-    
-    
-    
+    font-family: sans-serif;      
 }
 input{
     width: 95%;
@@ -28,9 +24,9 @@ input{
     border-radius: 10px;
     background-color: blueviolet;
     color: white;
-    height: 30px;
-    
+    height: 30px;    
 }
+
 .senha1{
     margin-right: 10px;
 }
