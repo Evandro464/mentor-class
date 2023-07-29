@@ -42,7 +42,7 @@ const renderNovo = (listaMentores) =>{
             '<td> ' + turma.semana + '</td>' +  
             '<td> ' + turma.horario1 + ' / ' + turma.horario2 + '</td>' +  
             '<td> ' + turma.encontros + '</td>' +  
-            '<td class="td-action"> <button type ="button" onclick="editeturma('+ turma.id+')" >editar</button ><button type ="button" onclick="deletar('+ turma.id+')" >Deletar</button ></td>'  
+            '<td class="td-button"> <a href="#" class = "a-href-editar" onclick="editeturma('+ turma.id+')"><span class="material-symbols-outlined">edit</span></a>&ensp;<a href="#" class = "a-href-delete" onclick="deletar('+ turma.id+')"><span class="material-symbols-outlined">delete</span></a></td>'  
         '</tr>';
         console.log(turma);
    });

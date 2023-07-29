@@ -280,5 +280,26 @@ input:checked[type="checkbox"]::before{
     font-size: 15px;
 }
 
+/*icons google */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.a-href-editar{
+  color:blue;
+  text-decoration: none;
+}
+
+.a-href-delete{
+  color:red;
+  text-decoration: none;
+}	
+.td-button{
+  text-align: right;
+}
+
 
   
