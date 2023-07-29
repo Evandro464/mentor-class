@@ -5,6 +5,7 @@ body{
 .cabecalho{
     width: 1428px;
     background-color: black;
+    color: black;
 }
 .menu{
     height: 700px;
@@ -24,12 +25,7 @@ body{
     width: 1240px;
     background-color:rgb(88, 90, 194);
     float: left;
-    margin-top: 10px;
-    
-
-    
-    
-
+    margin-top: 10px;    
 }
 
 .txt-align-bottom{
@@ -42,6 +38,7 @@ body{
     clear: both;
     width: 1428px;
     display: flex;
+    color: black;
 }
 .tabelas{
     margin-top: 100px;

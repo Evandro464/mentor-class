@@ -89,7 +89,7 @@ const deletar = async (id) => {
     await fetch('https://api-mentorclass.onrender.com/mentorias/' + id, {
         method:'DELETE'              
     });
-    window.location="../mentorias/listaMentorias.html";
+    window.location="../mentoria/listaMentorias.html";
 
     alert ("O mentor foi excluido!");
     return;

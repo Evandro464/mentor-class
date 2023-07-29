@@ -69,7 +69,7 @@ const salvarMentor = async () =>{
     await editarPessoa(id, pessoa)
 
     //redireciona a pagina para mentores.html
-    window.location = '../listaMentores.html'
+    window.location = '../../html/mentor/listaMentores.html'
 
 }
 

@@ -43,7 +43,7 @@ const renderNovo = (listaMentores) =>{
 }
 const editmentor=(mentorid)=>{
     console.log(mentorid)
-    window.location="../mentores/cadastroEdicaoMentor/edicaoMentor.html?id=" + mentorid
+    window.location="../mentor/edicaoMentor.html?id=" + mentorid
 }
 
 const getNovo = async () => {
@@ -61,7 +61,7 @@ const deletar = async (id) => {
         await fetch('https://api-mentorclass.onrender.com/mentores/' + id, {
         method:'DELETE'              
         });
-        window.location="../mentores/listaMentores.html";
+        window.location="../mentor/listaMentores.html";
 
         alert ("O mentor foi excluido!");
         return;

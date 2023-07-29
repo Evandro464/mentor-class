@@ -85,7 +85,7 @@ const renderDiaSemana =(listaM) =>{
     let selectHtmlSemana = document.getElementById("id-select-semana");
     listaM.forEach(b => {
         selectHtmlSemana.innerHTML = selectHtmlSemana.innerHTML+
-        ' <option value ="' + b.dia +'">'+ b.dia + '</option>';
+        ' <option value ="' + b +'">'+ b + '</option>';
     })
 }
 
