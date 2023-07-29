@@ -27,7 +27,7 @@ const editeturma=(turmaId)=>{
 //}
 
 const getNovo = async () => {
-    const response = await fetch("http://localhost:3000/turmas" );
+    const response = await fetch("https://api-mentorclass.onrender.com/turmas" );
     const listaTurmasJson = await response.json();
 
 //console.log(listaMentores);
@@ -37,7 +37,7 @@ renderNovo(listaTurmasJson);
 }
 const deletar = async (id) => {
     if(confirm("Deseja deletar o item?")){
-      await fetch('http://localhost:3000/turmas/' + id, {
+      await fetch('https://api-mentorclass.onrender.com/turmas/' + id, {
           method:'DELETE'              
       });
       window.location="turmas.html";

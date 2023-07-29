@@ -64,7 +64,7 @@
       "semana": "domingo",
       "horario1": "13:49",
       "turmas": "turma-ppp",
-      "link": " http://localhost:3000/turmas",
+      "link": " https://api-mentorclass.onrender.com/turmas",
       "encontros": "35",
       "horario2": "13:51",
       "id": 1
@@ -76,7 +76,7 @@
       "semana": "domingo",
       "horario1": "15:58",
       "turmas": "teste201",
-      "link": " http://localhost:3000/turmas",
+      "link": " https://api-mentorclass.onrender.com/turmas",
       "encontros": "10",
       "horario2": "16:59",
       "id": 2
@@ -89,7 +89,7 @@
       "horario1": "20:00",
       "horario2": "21:00",
       "turmas": "teste20",
-      "link": " http://localhost:3000/turmas",
+      "link": " https://api-mentorclass.onrender.com/turmas",
       "encontros": "12",
       "id": 3
     },
@@ -100,7 +100,7 @@
       "semana": "quinta-feira",
       "horario1": "20:01",
       "turmas": "teste20",
-      "link": " http://localhost:3000/turmas",
+      "link": " https://api-mentorclass.onrender.com/turmas",
       "encontros": "12",
       "horario2": "22:03",
       "id": 4

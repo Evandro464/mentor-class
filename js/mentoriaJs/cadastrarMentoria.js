@@ -14,7 +14,7 @@ const salvarMentoria = () => {
 }
 
 const cadastrarMentoria = async (mentorias) => {
-    await fetch ("http://localhost:3000/mentorias",{
+    await fetch ("https://api-mentorclass.onrender.com/mentorias",{
         method: "POST",
         headers: {
             'Accept' : 'application/json, text/plain, */*' ,
@@ -28,7 +28,7 @@ const cadastrarMentoria = async (mentorias) => {
 }
 
 const getMentores = async () =>{
-    const response = await fetch ("http://localhost:3000/mentores")
+    const response = await fetch ("https://api-mentorclass.onrender.com/mentores")
     const listaMentoresJson = await response.json();
     renderMentores(listaMentoresJson);
 
