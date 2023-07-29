@@ -14,7 +14,7 @@ const salvarAlunos = () => {
 }
 
 const cadastrarAluno = async (alunos) => {
-    await fetch ("http://localhost:3000/alunos",{
+    await fetch ("https://api-mentorclass.onrender.com/alunos",{
         method: "POST",
         headers: {
             'Accept' : 'application/json, text/plain, */*' ,

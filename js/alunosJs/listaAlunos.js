@@ -8,14 +8,14 @@ const pesquisar  = async ()=>{
         if(valorPesquisa) {
             valorPesquisaFinal ='?q=' + valorPesquisa;
         }
-        const respons = await fetch('http://localhost:3000/alunos/' + valorPesquisaFinal )
+        const respons = await fetch('https://api-mentorclass.onrender.com/alunos/' + valorPesquisaFinal )
         const listaMentoresJson = await respons.json()
         renderNovo(listaMentoresJson);
     }
 
 }
 const getMentoresPesquisa = async () => {
-    const response = await fetch("http://localhost:3000/alunos" );
+    const response = await fetch("https://api-mentorclass.onrender.com/alunos" );
     const listaMentoresJson = await response.json();
 
 //console.log(listaMentores);
@@ -48,7 +48,7 @@ const editAluno=(alunoid)=>{
 }
 
 const getNovo = async () => {
-    const response = await fetch("http://localhost:3000/alunos" );
+    const response = await fetch("https://api-mentorclass.onrender.com/alunos" );
     const listaAlunosJson = await response.json();
 
 //console.log(listaMentores);
@@ -59,7 +59,7 @@ renderNovo(listaAlunosJson);
 const deletar = async (id) => {
 
     if(confirm("Deseja deletar o item?")){
-        await fetch('http://localhost:3000/alunos/' + id, {
+        await fetch('https://api-mentorclass.onrender.com/alunos/' + id, {
         method:'DELETE'              
         });
         window.location="listaAlunos.html";

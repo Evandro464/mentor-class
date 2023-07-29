@@ -19,7 +19,7 @@ const buscarPessoa = async (id) => {
 
     //funcao resultado que vai aguardar uma busca na api com o id
     const resultado = 
-    await fetch('http://localhost:3000/alunos/' + id );
+    await fetch('https://api-mentorclass.onrender.com/alunos/' + id );
     const pessoa = await resultado.json()
 
     return pessoa
@@ -32,7 +32,7 @@ const carregarDadosFormulario = (pessoa) => {
 }
 
 const editarPessoa = async (id, pessoa) => {
-    await fetch('http://localhost:3000/alunos/' + id, {
+    await fetch('https://api-mentorclass.onrender.com/alunos/' + id, {
         method:'PUT',
         headers: {
             'Accept' : 'application/json, text/plain, */*' ,

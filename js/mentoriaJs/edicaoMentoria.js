@@ -12,7 +12,7 @@ const recuperarId = () => {
 
 // Função para buscar uma pessoa no banco de dados pelo ID
 const buscarPessoa = async (id) => {
-  const resultado = await fetch(`http://localhost:3000/mentorias/` + id);
+  const resultado = await fetch(`https://api-mentorclass.onrender.com/mentorias/` + id);
   return resultado.json();
 };
 
@@ -26,7 +26,7 @@ const carregarDadosFormulario = (pessoa) => {
 
 // Função para atualizar as informações de uma pessoa no banco de dados
 const editarPessoa = async (id, pessoa) => {
-  await fetch(`http://localhost:3000/mentorias/` + id, {
+  await fetch(`https://api-mentorclass.onrender.com/mentorias/` + id, {
     method: 'PUT',
     headers: {
       'Accept': 'application/json, text/plain, */*',
@@ -63,7 +63,7 @@ const carregarDadosEditar = async () => {
 };
 
 const getMentores = async () =>{
-  const response = await fetch ("http://localhost:3000/mentores")
+  const response = await fetch ("https://api-mentorclass.onrender.com/mentores")
   const listaMentoresJson = await response.json();
   renderMentores(listaMentoresJson);
 

@@ -8,14 +8,14 @@ const pesquisar  = async ()=>{
       if(valorPesquisa) {
           valorPesquisaFinal ='?q=' + valorPesquisa;
       }
-      const respons = await fetch('http://localhost:3000/mentorias/' + valorPesquisaFinal )
+      const respons = await fetch('https://api-mentorclass.onrender.com/mentorias/' + valorPesquisaFinal )
       const listaMentoresJson = await respons.json()
       renderMentorias(listaMentoresJson);
   }
 
 }
 const getMentoresPesquisa = async () => {
-  const response = await fetch("http://localhost:3000/mentorias" );
+  const response = await fetch("https://api-mentorclass.onrender.com/mentorias" );
   const listaMentoresJson = await response.json();
 
   //console.log(listaMentores);
@@ -62,7 +62,7 @@ const converterStatus = (statusBoleano) => {
 }
 /*
  const obterMentor = async (mentorId)=>{
-    const resultado = await fetch('http://localhost:3000/mentores/' + mentorId);
+    const resultado = await fetch('https://api-mentorclass.onrender.com/mentores/' + mentorId);
     const pessoa = await resultado.json();
     return pessoa.nome;
 }
@@ -77,7 +77,7 @@ const editmentoria=(mentoriaid)=>{
 //}
 
 const getMentoria = async () => {
-    const response = await fetch ("http://localhost:3000/mentorias")
+    const response = await fetch ("https://api-mentorclass.onrender.com/mentorias")
     const listaMentoriaJson = await response.json()
 
     renderMentorias(listaMentoriaJson)
@@ -86,7 +86,7 @@ const getMentoria = async () => {
 }
 const deletar = async (id) => {
   if(confirm("Deseja deletar o item?")){
-    await fetch('http://localhost:3000/mentorias/' + id, {
+    await fetch('https://api-mentorclass.onrender.com/mentorias/' + id, {
         method:'DELETE'              
     });
     window.location="../mentorias/listaMentorias.html";
