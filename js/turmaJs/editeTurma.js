@@ -12,7 +12,7 @@ const recuperarId = () => {
 
 // Função para buscar uma pessoa no banco de dados pelo ID
 const buscarPessoa = async (id) => {
-  const resultado = await fetch(`https://api-mentorclass.onrender.com/turmas/` + id);
+  const resultado = await fetch(`http://localhost:3000/turmas/` + id);
   return resultado.json();
 };
 
@@ -39,7 +39,7 @@ const carregarDadosFormulario = (pessoa) => {
 
 // Função para atualizar as informações de uma pessoa no banco de dados
 const editarPessoa = async (id, pessoa) => {
-  await fetch(`https://api-mentorclass.onrender.com/turmas/` + id, {
+  await fetch(`http://localhost:3000/turmas/` + id, {
     method: 'PUT',
     headers: {
       'Accept': 'application/json, text/plain, */*',
@@ -85,7 +85,7 @@ const carregarDadosEditar = async () => {
 };
 
 const getMentores = async () =>{
-  const response = await fetch ("https://api-mentorclass.onrender.com/mentores")
+  const response = await fetch ("http://localhost:3000/mentores")
   const listaMentoresJson = await response.json();
   renderMentores(listaMentoresJson);
 
@@ -105,7 +105,7 @@ const renderMentores = (mentores) =>{
 }
 
 const getMentorias = async () =>{
-  const response = await fetch (" https://api-mentorclass.onrender.com/mentorias")
+  const response = await fetch (" http://localhost:3000/mentorias")
   const listaTurmasJson = await response.json();
   renderMentorias(listaTurmasJson);
 
@@ -122,7 +122,7 @@ const renderMentorias = (listaM) =>{
 }
 
 const getDiaSemana = async () =>{
-  const response = await fetch (" https://api-mentorclass.onrender.com/turmas")
+  const response = await fetch (" http://localhost:3000/turmas")
   const listaTurmaJson = await response.json();
   renderDiaSemana(listaTurmaJson);
 
@@ -139,7 +139,7 @@ const renderDiaSemana =(listaM) =>{
 }
 
 const getTurmas = async () =>{
-  const response = await fetch ("https://api-mentorclass.onrender.com/turmas")
+  const response = await fetch ("http://localhost:3000/turmas")
   const listaTurmasJson = await response.json();
   renderTurmas(listaTurmasJson);
 

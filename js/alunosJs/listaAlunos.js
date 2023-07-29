@@ -1,5 +1,35 @@
+
+const pesquisar  = async ()=>{
+    if(event.key === 'Enter') {
+        const inputPesquisa = document.getElementById ("txtBusca");
+        let valorPesquisa = inputPesquisa.value;
+        let valorPesquisaFinal = '';
+
+        if(valorPesquisa) {
+            valorPesquisaFinal ='?q=' + valorPesquisa;
+        }
+        const respons = await fetch('http://localhost:3000/alunos/' + valorPesquisaFinal )
+        const listaMentoresJson = await respons.json()
+        renderNovo(listaMentoresJson);
+    }
+
+}
+const getMentoresPesquisa = async () => {
+    const response = await fetch("http://localhost:3000/alunos" );
+    const listaMentoresJson = await response.json();
+
+//console.log(listaMentores);
+    renderNovo(listaMentoresJson);
+
+
+}
+
 const renderNovo = (listaMentores) =>{
     // criando variavel 
+    const tabelaAntiga = document.querySelector("tbody");
+    let newTabela = document.createElement('tbody');
+    tabelaAntiga.parentNode.replaceChild(newTabela, tabelaAntiga);
+
     const tabela = document.querySelector("tbody");
 
     listaMentores.forEach(aluno => {    
@@ -14,11 +44,11 @@ const renderNovo = (listaMentores) =>{
 }
 const editAluno=(alunoid)=>{
     console.log(alunoid)
-    window.location="../../html/Alunos/listaAlunos.html?id=" + alunoid
+    window.location="../Alunos/editeAluno.html?id=" + alunoid
 }
 
 const getNovo = async () => {
-    const response = await fetch("https://api-mentorclass.onrender.com/alunos" );
+    const response = await fetch("http://localhost:3000/alunos" );
     const listaAlunosJson = await response.json();
 
 //console.log(listaMentores);
@@ -29,12 +59,12 @@ renderNovo(listaAlunosJson);
 const deletar = async (id) => {
 
     if(confirm("Deseja deletar o item?")){
-        await fetch('https://api-mentorclass.onrender.com/alunos/' + id, {
+        await fetch('http://localhost:3000/alunos/' + id, {
         method:'DELETE'              
         });
         window.location="listaAlunos.html";
 
-        alert ("O mentor foi excluido!");
+        alert ("O Aluno foi excluido!");
         return;
     }          
     return;

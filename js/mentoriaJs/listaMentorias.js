@@ -1,9 +1,38 @@
-const renderMentorias = (mentoria)=>{
-    // criando variavel 
-    const tabela = document.querySelector("tbody");
 
-    //listaMentorias.forEach(mentoria => {    
-         mentoria.forEach  (mentoria =>  {
+const pesquisar  = async ()=>{
+  if(event.key === 'Enter') {
+      const inputPesquisa = document.getElementById ("txtBusca");
+      let valorPesquisa = inputPesquisa.value;
+      let valorPesquisaFinal = '';
+
+      if(valorPesquisa) {
+          valorPesquisaFinal ='?q=' + valorPesquisa;
+      }
+      const respons = await fetch('http://localhost:3000/mentorias/' + valorPesquisaFinal )
+      const listaMentoresJson = await respons.json()
+      renderMentorias(listaMentoresJson);
+  }
+
+}
+const getMentoresPesquisa = async () => {
+  const response = await fetch("http://localhost:3000/mentorias" );
+  const listaMentoresJson = await response.json();
+
+  //console.log(listaMentores);
+  renderMentorias(listaMentoresJson);
+
+
+}
+
+const renderMentorias = (listaMentores) =>{
+  // criando variavel 
+  const tabelaAntiga = document.querySelector("tbody");
+  let newTabela = document.createElement('tbody');
+  tabelaAntiga.parentNode.replaceChild(newTabela, tabelaAntiga);
+
+  const tabela = document.querySelector("tbody");
+
+  listaMentores.forEach(mentoria => { 
             tabela.innerHTML = tabela.innerHTML + 
             '<tr> ' +
             '<td> ' + mentoria.mentoria + '</td>' +
@@ -33,14 +62,14 @@ const converterStatus = (statusBoleano) => {
 }
 /*
  const obterMentor = async (mentorId)=>{
-    const resultado = await fetch('https://api-mentorclass.onrender.com/mentores/' + mentorId);
+    const resultado = await fetch('http://localhost:3000/mentores/' + mentorId);
     const pessoa = await resultado.json();
     return pessoa.nome;
 }
 */
 const editmentoria=(mentoriaid)=>{
     console.log(mentoriaid)
-    window.location="../mentorias/cadastroEdicaoMentoria/edicaoMentoria.html?id="+mentoriaid
+    window.location="../mentoria/edicaoMentoria.html?id="+mentoriaid
 }
 //const deletar=(mentorid)=>{
     //console.log(mentorid)
@@ -48,7 +77,7 @@ const editmentoria=(mentoriaid)=>{
 //}
 
 const getMentoria = async () => {
-    const response = await fetch ("https://api-mentorclass.onrender.com/mentorias")
+    const response = await fetch ("http://localhost:3000/mentorias")
     const listaMentoriaJson = await response.json()
 
     renderMentorias(listaMentoriaJson)
@@ -57,7 +86,7 @@ const getMentoria = async () => {
 }
 const deletar = async (id) => {
   if(confirm("Deseja deletar o item?")){
-    await fetch('https://api-mentorclass.onrender.com/mentorias/' + id, {
+    await fetch('http://localhost:3000/mentorias/' + id, {
         method:'DELETE'              
     });
     window.location="../mentorias/listaMentorias.html";

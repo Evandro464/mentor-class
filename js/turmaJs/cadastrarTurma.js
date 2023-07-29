@@ -29,7 +29,7 @@ const salvarTurmas = () => {
 }
 
 const cadastrarTurmas = async (turmas) => {
-    await fetch ("https://api-mentorclass.onrender.com/turmas",{
+    await fetch ("http://localhost:3000/turmas",{
         method: "POST",
         headers: {
             'Accept' : 'application/json, text/plain, */*' ,
@@ -43,7 +43,7 @@ const cadastrarTurmas = async (turmas) => {
 }
 
 const getMentorias = async () =>{
-    const response = await fetch (" https://api-mentorclass.onrender.com/mentorias")
+    const response = await fetch (" http://localhost:3000/mentorias")
     const listaTurmasJson = await response.json();
     renderMentorias(listaTurmasJson);
 
@@ -60,7 +60,7 @@ const renderMentorias = (listaM) =>{
 }
 
 const getMentor = async () =>{
-    const response = await fetch (" https://api-mentorclass.onrender.com/mentorias")
+    const response = await fetch (" http://localhost:3000/mentorias")
     const listaTurmaJson = await response.json();
     renderMentor(listaTurmaJson);
 
@@ -75,7 +75,7 @@ const renderMentor =(listaM) =>{
 }
 
 const getDiaSemana = async () =>{
-    const response = await fetch (" https://api-mentorclass.onrender.com/semana")
+    const response = await fetch (" http://localhost:3000/semana")
     const listaTurmaJson = await response.json();
     renderDiaSemana(listaTurmaJson);
 
