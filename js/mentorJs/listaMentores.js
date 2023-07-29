@@ -36,7 +36,7 @@ const renderNovo = (listaMentores) =>{
         '<tr> ' +
             '<td> ' + mentor.nome + '</td>' +
             '<td> ' + mentor.email + '</td>' +  
-            '<td class="td-action"> <button type ="button" onclick="editmentor('+ mentor.id+')" >editar</button ><button type ="button" onclick="deletar('+ mentor.id+')" >Deletar</button ></td>'  
+            '<td class="td-button"><a href="#" class = "a-href-editar" onclick="editmentor('+ mentor.id+')"><span class="material-symbols-outlined">edit</span></a><a href="#" class = "a-href-delete" onclick="deletar('+ mentor.id+')"><span class="material-symbols-outlined">delete</span></a></td>'  
         '</tr>';
         console.log(mentor);
    });

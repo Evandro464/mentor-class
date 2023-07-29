@@ -40,7 +40,7 @@ const renderMentorias = (listaMentores) =>{
             //'<td> '  +mentoria.status + '</td>' + 
             //'<td> ' + (mentoria.status!=null && mentoria.status==true ? "Ativo" : "Inativo") + '</td>' + 
             '<td> ' + (converterStatus( mentoria.status)) +  '</td>' + 
-            '<td class="td-action"> <button type ="button" onclick="editmentoria('+ mentoria.id+')" >editar</button ><button type ="button" onclick="deletar('+ mentoria.id+')" >Deletar</button ></td>'  
+            '<td class="td-button"><a href="#" class = "a-href-editar" onclick="editmentoria('+ mentoria.id+')"><span class="material-symbols-outlined">edit</span></a><a href="#" class = "a-href-delete" onclick="deletar('+ mentoria.id+')"><span class="material-symbols-outlined">delete</span></a></td>'  
         '</tr>';
         //console.log("mentoria",mentoria)
     

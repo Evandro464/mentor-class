@@ -37,7 +37,7 @@ const renderNovo = (listaMentores) =>{
         '<tr> ' +
             '<td> ' + aluno.nome + '</td>' +
             '<td> ' + aluno.email + '</td>' +  
-            '<td class="td-action"> <button type ="button" onclick="editAluno('+ aluno.id+')" >editar</button ><button type ="button" onclick="deletar('+ aluno.id+')" >Deletar</button ></td>'  
+            '<td class="td-button"><a href="#" class = "a-href-editar" onclick="editAluno('+ aluno.id+')"><span class="material-symbols-outlined">edit</span></a><a href="#" class = "a-href-delete" onclick="deletar('+ aluno.id+')"><span class="material-symbols-outlined">delete</span></a></td>'  
         '</tr>';
         console.log(aluno);
    });
