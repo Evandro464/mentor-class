@@ -1,25 +1,6 @@
 {
   "mentores": [
-    {
-      "nome": "paula",
-      "email": "paula@gmail.com1",
-      "id": 5
-    },
-    {
-      "nome": "evandro carneiro pascott ",
-      "email": "evandricarneiropascott@gmail.com",
-      "id": 8
-    },
-    {
-      "nome": "Evandro Pascott 2223",
-      "email": "evandro2223@gmail.com",
-      "id": 11
-    },
-    {
-      "nome": "fernado",
-      "email": "paula@gmail.com",
-      "id": 13
-    }
+   
   ],
   "mentorias": [
     {
