@@ -65,7 +65,7 @@ const deletar = async (id) => {
       });
       window.location="turmas.html";
   
-      alert ("O mentor foi excluido!");
+      alert ("a turma foi excluida!");
       return;
     }
     return;  

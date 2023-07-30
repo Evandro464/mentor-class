@@ -20,8 +20,6 @@ const getMentoresPesquisa = async () => {
 
 //console.log(listaMentores);
     renderNovo(listaMentoresJson);
-
-
 }
 
 const renderNovo = (listaMentores) =>{

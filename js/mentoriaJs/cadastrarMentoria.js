@@ -2,12 +2,12 @@ const salvarMentoria = () => {
     const formulario = document.getElementById("formulario2")
 
     const mentoria = formulario.elements['mentoria' ].value;
-    const mentor = formulario.elements['mentor'].value;    
-
+    const mentor = formulario.elements['mentor'].value; 
+    const status = document.getElementById('flexSwitchCheckChecked').checked;
     const mentorias = {
         mentoria,
         mentor,
-       // status
+        status,
     }
     console.log("mentorias" , mentorias)
     cadastrarMentoria(mentorias);

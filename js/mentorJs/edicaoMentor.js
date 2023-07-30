@@ -1,7 +1,6 @@
 
 let idEditar = null
 
-
 //criando variavel formulario que recebe um elemento por id 
 const formulario = document.getElementById('formulario')
 
